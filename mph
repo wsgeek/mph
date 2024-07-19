@@ -555,7 +555,7 @@ struct find$simd {
  */
 template<const auto& entries> inline constexpr auto lookup =
   []([[maybe_unused]] const auto& key) {
-    using key_type = typename detail::traits<entries>::key_type;
+    // using key_type = typename detail::traits<entries>::key_type;
     using mapped_type = typename detail::traits<entries>::mapped_type;
     using result_type = mapped_type;
     if constexpr (entries.size() == 0u) {
